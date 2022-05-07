@@ -3,8 +3,8 @@ import Navbar from './Navbar/Navbar';
 
 const Header = () => {
     return (
-        <div>
-            <h1 className='text-5xl font-bold'>Inventory</h1>
+        <div className='container-fluid mx-auto fixed top-0 left-0 right-0 md:flex justify-center items-center pb-5 pt-5 bg-slate-700 z-10'>
+            <h1>Inventory</h1>
             <Navbar></Navbar>
         </div>
     );

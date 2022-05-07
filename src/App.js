@@ -7,6 +7,10 @@ import SignUp from './Components/Pages/SignUp/SignUp';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 const App = () => {
   return (
     <div>
@@ -16,11 +20,8 @@ const App = () => {
       <Route path='/banners' element={<Banners></Banners>} ></Route>
       <Route path='/login' element={<Login></Login>} ></Route>
       <Route path='/signup' element={<SignUp></SignUp>} ></Route>
-
-      
-    </Routes>
+      </Routes>
     <Footer></Footer>
-      
     </div>
   );
 };

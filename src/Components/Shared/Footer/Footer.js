@@ -4,7 +4,7 @@ const Footer = () => {
     const day = new Date();
     const year = day.getFullYear();
     return (
-        <div className='absolute left-0 right-0 bottom-0 container-fluid '>
+        <div className='container-fluid'>
             <div className='md:flex justify-center items-start pl-5 pr-5 pt-5 pb-5 mx-auto bg-slate-900 text-slate-500 gap-[55px]'>
             <section className='w-[250px]'>
             <h1 className='font-semibold text-slate-200 pb-2'>Red-Ventory</h1>

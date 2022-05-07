@@ -9,7 +9,7 @@ import Header from './Components/Shared/Header/Header';
 
 const App = () => {
   return (
-    <>
+    <div>
     <Header></Header>
     <Routes>
       <Route path='/' element={<Home></Home>} ></Route>
@@ -21,7 +21,7 @@ const App = () => {
     </Routes>
     <Footer></Footer>
       
-    </>
+    </div>
   );
 };
 

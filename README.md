@@ -1,6 +1,6 @@
 # Inventory App
 
-Live Link [Inventory]().
+Live Link [Inventory](https://red-ventory.web.app/).
 
 * CSS Framework - Tailwind
 * Authentication - Firebase

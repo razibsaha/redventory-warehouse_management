@@ -8,6 +8,7 @@ import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Blog from './Components/Pages/Blog/Blog';
 
 
 
@@ -17,7 +18,7 @@ const App = () => {
     <Header></Header>
     <Routes>
       <Route path='/' element={<Home></Home>} ></Route>
-      <Route path='/banners' element={<Banners></Banners>} ></Route>
+      <Route path='/blog' element={<Blog></Blog>} ></Route>
       <Route path='/login' element={<Login></Login>} ></Route>
       <Route path='/signup' element={<SignUp></SignUp>} ></Route>
       </Routes>

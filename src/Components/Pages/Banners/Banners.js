@@ -23,7 +23,7 @@ const Banners = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h1 className="text-8xl font-bold">This is Home</h1>
+          <h1 className="text-8xl font-bold">This is Image01</h1>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -36,7 +36,7 @@ const Banners = () => {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
+        <h1 className="text-8xl font-bold">This is Image02</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -49,7 +49,7 @@ const Banners = () => {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+        <h1 className="text-8xl font-bold">This is Image03</h1>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>

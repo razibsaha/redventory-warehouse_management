@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../../../Assets/Images/red-ventory-white.png'
 
 const Footer = () => {
     const day = new Date();
@@ -7,8 +8,8 @@ const Footer = () => {
         <div className="wrapper">
             <div className='md:flex justify-center items-start pl-5 pr-5 pt-5 pb-5 mx-auto bg-slate-900 text-slate-500 gap-[55px]'>
             <section className='w-[250px]'>
-            <p className='font-semibold text-slate-200 pb-2'>Red-Ventory</p>
-            <p>We are a electronic items warehouse. There are like 200+ items in our storage. To keep track of all those items we use mongodb database.</p>
+            <img className='-ml-5 grayscale mb-2' src={Logo} alt="" />
+            <p>We are a electronic items warehouse. There are like 200+ items in our storage. To keep track of all those items we use mongodb database. Our sell has been great last year. We should be focused this year.</p>
             </section>
             <section className='flex flex-col'>
             <p className='font-semibold text-slate-200 pb-2'>Product Listing</p>

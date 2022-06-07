@@ -2,7 +2,7 @@
 
 @layer components {
   header a {
-    @apply text-slate-500 popy;
+    @apply text-slate-500 hname;
   }
   header li {
     @apply flex justify-center align-middle;
@@ -11,7 +11,7 @@
 @tailwind components;
 
 .active {
-  @apply border-b-2 border-[#d5b69c] no-underline popy font-bold text-[#d5b69c];
+  @apply border-b-2 border-[#ee316b] no-underline hname font-bold text-[#ee316b];
 }
 
 @layer components {
@@ -25,9 +25,16 @@
 
 @tailwind utilities;
 
-.popy {
-  font-family: "Poppins", sans-serif;
+@font-face {
+  font-family: "Mollie-Glaston";
+  src: url("./Assets/Custom-font/Mollie-glaston/Mollie-Glaston.ttf")
+      format("truetype"),
+    url("./Assets/Custom-font/Mollie-glaston/Mollie-Glaston.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
 .pfair {
   font-family: "Playfair Display", serif;
 }
@@ -38,13 +45,27 @@
   font-family: "Playfair Display", serif;
   font-weight: 200;
   font-size: x-large;
-  color: #d5b69c;
+  color: #ee316b;
+}
+.regular {
+  font-family: "Mollie-Glaston", sans-serif;
+}
+.hname {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color: rgb(30 41 59); */
+  color: white;
 }
 .name {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: large;
-  color: #a0a0a0;
+  font-family: "Mollie-Glaston", sans-serif;
+  color: rgb(30 41 59);
+  font-size: 48px;
+}
+.bannerName {
+  font-family: "Mollie-Glaston", sans-serif;
+  color: #ffffff;
+  font-size: 96px;
 }
 
 /* .active {

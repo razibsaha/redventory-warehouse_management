@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey || 'mock_key',
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId
+  apiKey: "AIzaSyALnnR2r8aDvYmuqTYBZTJL7E0yiyW7jIE" || "mock_key",
+  authDomain: "red-ventory.firebaseapp.com",
+  projectId: "red-ventory",
+  storageBucket: "red-ventory.appspot.com",
+  messagingSenderId: "928510665989",
+  appId: "1:928510665989:web:b1d3eb910a8ececca4436c"
 };
 
 // Initialize Firebase

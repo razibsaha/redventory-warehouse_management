@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Item = ({ item }) => {
-  const { name, category, image, description, sold, supplier, quantity } = item;
+  const { _id,name, category, image, description, sold } = item;
+
+  const navigate = useNavigate();
+
+  const navigateToItemDetails = (id) => {
+    navigate(`/inventory/${id}`);
+  };
+
   return (
     <div className="flex justify-evenly m-2">
       <div className="flex flex-col w-[350px] mx-auto bg-gray-800 rounded-lg">
@@ -24,9 +32,9 @@ const Item = ({ item }) => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M9.4,2.5c0.1,0.5,0.1,1,0.2,1.4c0,0.1,0,0.2-0.1,0.3C9.2,4.8,9.4,5.4,9.9,5.8c0.5,0.3,1.2,0.2,1.6-0.3
 	C12,5,11.9,4.3,11.5,3.8c-0.1-0.1-0.1-0.2-0.2-0.3c-0.1-0.3-0.1-0.5-0.1-0.9c0.4,0.1,0.8,0.1,1.1,0.2c0.2,0.1,0.3,0.3,0.3,0.5
 	c0.1,0.5,0.1,1,0.2,1.5c0.1,1,0.1,2,0.1,3c0,0.4-0.1,0.7-0.4,0.9c-2.1,2-4.1,4.1-6.2,6.2c-0.6,0.6-1.2,0.6-1.8,0
@@ -47,16 +55,14 @@ const Item = ({ item }) => {
         </div>
         <div className="py-2 px-4">
           <h1 className="text-xl font-medium leading-6 tracking-wide text-gray-300 hover:text-blue-500 cursor-pointer">
-            
-              <p
-                href="#"
-                className="text-blue-100 "
-                data-bs-toggle="tooltip"
-                title={name}
-              >
-                {name.slice(0,20)+'...'}
-              </p>
-            
+            <p
+              href="#"
+              className="text-blue-100 "
+              data-bs-toggle="tooltip"
+              title={name}
+            >
+              {name.slice(0, 20) + "..."}
+            </p>
           </h1>
         </div>
         <div className="px-4 space-y-2">
@@ -66,41 +72,13 @@ const Item = ({ item }) => {
         </div>
         <div className="flex flex-row items-end h-[100px]  w-full px-4 mt-4">
           <div className="flex border-t border-gray-700 w-full py-4">
-            <div className="flex items-center space-x-3 border-r border-gray-700 w-full">
-              <img
-                className="object-cover w-8 h-8 border-2 border-white rounded-full"
-                src="https://storageapi.fleek.co/kamaludin21-team-bucket/portfolio/avatar.jpg"
-                alt="profile users"
-                loading="lazy"
-              />
-              <div className="">
-                <p className="text-sm font-semibold tracking-wide text-gray-200">
-                  {supplier}
-                </p>
-                <p className="text-xs font-light tracking-wider text-gray-300">
-                  2 Hours ago
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center flex-shrink-0 px-2">
-              <div className="flex -center space-x-1 text-gray-400">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-                <p className="font-medium">{quantity}</p>
-              </div>
-            </div>
+            <button
+              onClick={() => navigateToItemDetails(_id)}
+              className="bg-[#ffb037] p-3 rounded-md text-slate-800 hover:bg-[#fbdfb7] w-full"
+            >
+              
+              Update Stock
+            </button>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import {
-  useCreateUserWithEmailAndPassword,
-  useUpdateProfile,
+    useCreateUserWithEmailAndPassword,
+    useUpdateProfile
 } from "react-firebase-hooks/auth";
-import { ToastContainer, toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
@@ -12,9 +12,9 @@ import LoginSocial from "../Login/LoginSocial.js/LoginSocial";
 
 const SignUp = () => {
   const [agree, setAgree] = useState(false);
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword,loading] =
     useCreateUserWithEmailAndPassword(auth);
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
 
   const nameRef = useRef("");
   const emailRef = useRef("");
@@ -43,7 +43,7 @@ const SignUp = () => {
       <div className="flex justify-center align-middle mt-5 -mb-10">
         <p className="font-medium text-3xl text-gray-600 text-center popy">
           Welcome! Please
-          <span className="text-[#D5B69C]"> SignUp</span>
+          <span className="text-[#ee316b]"> SignUp</span>
         </p>
       </div>
 
@@ -84,7 +84,7 @@ const SignUp = () => {
           className="py-3 ml-5 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400focus:invalid:outline-none"
         />
         <label
-          className={`ps-2 ${agree ? "text-[#D5B69C]" : "text-red-500"}`}
+          className={`ps-2 ${agree ? "text-[#ee316b]" : "text-red-500"}`}
           htmlFor="terms"
         >
           Accept Terms & Conditions
@@ -93,7 +93,7 @@ const SignUp = () => {
         <div className="container mx-auto">
           <button
             disabled={!agree}
-            className="w-full px-6 py-3 rounded-lg bg-[#D5B69C] transition hover:bg-[#c19f83] focus:bg-[#D5B69C] active:bg-[#D5B69C] disabled:bg-[#c8c8c8]"
+            className="w-full px-6 py-3 rounded-lg bg-[#ee316b] transition hover:bg-[#842d72] focus:bg-[#ee316b] active:bg-[#ee316b] disabled:bg-[#c8c8c8]"
           >
             <span className="font-bold text-white text-lg">SignUp</span>
           </button>
@@ -103,7 +103,7 @@ const SignUp = () => {
             <Link
               to="/login"
               onClick={navigateLogin}
-              className="text-[#D5B69C] pe-auto text-decoration-none"
+              className="text-[#ee316b] pe-auto text-decoration-none"
             >
               <span className="no-underline"> Login</span>
             </Link>

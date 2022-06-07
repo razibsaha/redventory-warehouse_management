@@ -5,7 +5,7 @@ const Partners = () => {
     return (
         <div className='container mx-auto mb-5'>
            <div className='flex justify-center items-center font-bold pb-4'>
-           <h1>Our Trusted Partners</h1>
+           <h1 className='name'>Our Trusted Partners</h1>
            </div>
            <img src={partnerimage} alt="" /> 
         </div>

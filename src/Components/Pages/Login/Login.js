@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import {
   useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
+  useSignInWithEmailAndPassword
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
@@ -13,15 +13,17 @@ import LoginSocial from "./LoginSocial.js/LoginSocial";
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  let from = location.state?.from?.pathname || "/";
+ 
 
   const [signInWithEmailAndPassword, user, loading] =
     useSignInWithEmailAndPassword(auth);
 
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
 
   if (user) {
     navigate(from, { replace: true });
@@ -52,11 +54,11 @@ const Login = () => {
     
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto lg:mt-40 mt-24">
       <div className="flex justify-center align-middle mt-5 -mb-10">
-        <p className="font-medium text-3xl text-gray-600 text-center popy">
+        <p className="font-medium text-3xl text-gray-600 text-center name">
           Welcome! Please
-          <span className="text-[#D5B69C]"> Login.</span>
+          <span className="text-[#ee316b]"> Login.</span>
         </p>
       </div>
 
@@ -83,7 +85,7 @@ const Login = () => {
           />
           <button
             onClick={resetPassword}
-            className="w-max text-right p-3 -mr-3 text-sm tracking-wide text-slate-400 hover:text-[#D5B69C]"
+            className="w-max text-right p-3 -mr-3 text-sm tracking-wide text-slate-400 hover:text-[#ee316b]"
           >
             Forgot password ?
           </button>
@@ -92,7 +94,7 @@ const Login = () => {
         <div className="container -mt-3 mx-auto">
           <button
             type="submit"
-            className="w-full px-6 py-3 rounded-lg bg-[#D5B69C] transition hover:bg-[#c19f83] focus:bg-[[#D5B69C]] active:bg-[#D5B69C]"
+            className="w-full px-6 py-3 rounded-lg bg-[#ee316b] transition hover:bg-[#842d72] focus:bg-[#842d72] active:bg-[#ee316b]"
           >
             <span className="font-bold text-white text-lg">Login</span>
           </button>
@@ -100,7 +102,7 @@ const Login = () => {
             Don't have an account? Please
             <Link
               to="/signup"
-              className="text-[#D5B69C] pe-auto text-decoration-none"
+              className="text-[#ee316b] pe-auto text-decoration-none"
               onClick={navigateSignUp}
             >
               {" "}

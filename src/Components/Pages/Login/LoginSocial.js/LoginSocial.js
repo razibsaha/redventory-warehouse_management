@@ -6,12 +6,12 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
-
-import auth from "../../../../firebase.init";
 import Loading from "../../../Shared/Loading/Loading";
+import auth from "../../../../firebase.init";
 
 const LoginSocial = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  
   const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
   const navigate = useNavigate();
   const location = useLocation();

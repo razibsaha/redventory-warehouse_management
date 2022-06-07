@@ -14,7 +14,7 @@ const Banners = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel className="md:mt-32 mt-14" activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           style={{ height: "60vh" }}
@@ -23,8 +23,8 @@ const Banners = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h1 className="text-8xl font-bold">This is Image01</h1>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h1 className="bannerName">Best Products in the Market</h1>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -36,8 +36,8 @@ const Banners = () => {
         />
 
         <Carousel.Caption>
-        <h1 className="text-8xl font-bold">This is Image02</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 className="bannerName">Best Sales in last 10 years</h1>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -49,10 +49,8 @@ const Banners = () => {
         />
 
         <Carousel.Caption>
-        <h1 className="text-8xl font-bold">This is Image03</h1>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <h1 className="bannerName">Sales during covid was low all round the world, but we didn't suffer</h1>
+          
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
